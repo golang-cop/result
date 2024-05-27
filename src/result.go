@@ -1,0 +1,57 @@
+package Result
+
+import (
+	Error "github.com/golang-oop/error/src"
+	NullError "github.com/golang-oop/error/src/null"
+	Null "github.com/golang-oop/null/src"
+)
+
+type Interface interface {
+	Payload() interface{}
+	HasError() bool
+	Error() Error.Interface
+}
+
+type data struct {
+	payload interface{}
+	error   Error.Interface
+}
+
+type Option func(*data)
+
+func New(options ...Option) Interface {
+	d := &data{
+		payload: Null.New(),
+		error:   NullError.New(),
+	}
+	for _, opt := range options {
+		opt(d)
+	}
+	return d
+}
+
+func WithPayload(payload interface{}) Option {
+	return func(d *data) {
+		d.payload = payload
+	}
+}
+func WithError(error Error.Interface) Option {
+	return func(d *data) {
+		d.error = error
+	}
+}
+
+func (d data) Payload() interface{} {
+	return d.payload
+}
+
+func (d data) HasError() bool {
+	return d.error.IsNull()
+}
+
+/*
+Return the error of a result
+*/
+func (d data) Error() Error.Interface {
+	return d.error
+}
