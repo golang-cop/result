@@ -1,3 +1,5 @@
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/golang-oop/error v0.0.0-20240527134905-0411e80eb557 h1:zqlCRV/ims5vWmBp+s9fkAi7HaM4ie2JCGlIUeoC0eo=
 github.com/golang-oop/error v0.0.0-20240527134905-0411e80eb557/go.mod h1:BUOCKtvB/+8SaYImGivuaEXzQ6dSivw1l/ijzn9nf08=
 github.com/golang-oop/null v0.0.0-20240527135322-5ea6aaed8bf9 h1:d73lKALtDzCzEuG2Bzg/p9+ncZjqKZkv+aIyblPsM2I=
