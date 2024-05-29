@@ -62,7 +62,7 @@ func (d data) Payload() interface{} {
 Say if a result has an error attached.
 */
 func (d data) HasError() bool {
-	return d.error.IsNull()
+	return !d.error.IsNull()
 }
 
 /*
